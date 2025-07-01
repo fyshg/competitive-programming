@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.3.2 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.3.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.3.2">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.3.2">
+    <script src="/js/jquery.min.js?v=7.3.2"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.3.2"></script>
+
+    <script src="/js/domjudge.js?v=7.3.2"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.3.2">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+                            <li class="nav-item">
+                    <a class="nav-link" href="/team">
+                        <i class="fas fa-arrow-right"></i> Team
+                    </a>
+                </li>
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/logout"
+    >
+        <button type="button" class="btn btn-outline-info btn-sm">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContests" role="button" data-toggle="dropdown"
+       aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-trophy"></i> ECC2021
+    </a>
+    <div class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item disabled" href="#">Change Contest</a>
+                            <a class="dropdown-item"
+               href="/public/change-contest/39">7_2_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/40">geo_28_02_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/41">7_3_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/42">14_3_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/43">21_03_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/44">04_04_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/45">11_04_22</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/46">CP2022-01</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/47">CP2022-02</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/48">CP2022-03</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/49">CP2022-04</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/50">CP2022-05</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/51">CP2022-06</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/52">CP2022-07</a>
+                    <a class="dropdown-item"
+               href="/public/change-contest/53">probecontest</a>
+            </div>
+</li>
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft"></span>
+</div>
+
+<script>
+    var initial = 1653340618;
+    var localInitial = new Date().getTime();
+    var activatetime = 1639921920.000000000;
+    var starttime = 1640106000.000000000;
+    var endtime = 1644533999.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
